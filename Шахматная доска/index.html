@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Шахматная доска</title>
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    
+<!--                                        table>(thead>tr>th+th{$}*8+th)+(tfoot>tr>th+th{$}*8+th)+((tr>th{$@1}+(td#a$.black{n$}+td#a$.white{n$@2})*4+th{$@1})+(tr>th{$@2}+(td#a.white{n$}+td#a.black{n$@2})*4+th{$@2}))*4
+-->
+                   <table>
+                       <thead>
+                           <tr>
+                               <th></th>
+                               <th>a</th>
+                               <th>b</th>
+                               <th>c</th>
+                               <th>d</th>
+                               <th>e</th>
+                               <th>f</th>
+                               <th>g</th>
+                               <th>h</th>
+                               <th></th>
+                           </tr>
+                       </thead>
+                       <tfoot>
+                           <tr>
+                               <th></th>
+                               <th>a</th>
+                               <th>b</th>
+                               <th>c</th>
+                               <th>d</th>
+                               <th>e</th>
+                               <th>f</th>
+                               <th>g</th>
+                               <th>h</th>
+                               <th></th>
+                           </tr>
+                       </tfoot>
+                       <tr>
+                           <th>1</th>
+                           <td id="a1" class="black">a1</td>
+                           <td id="b1" class="white">b1</td>
+                           <td id="c1" class="black">c1</td>
+                           <td id="d1" class="white">n3</td>
+                           <td id="e1" class="black">n3</td>
+                           <td id="f1" class="white">n4</td>
+                           <td id="g1" class="black">n4</td>
+                           <td id="h1" class="white">n5</td>
+                           <th>1</th>
+                       </tr>
+                       <tr>
+                           <th>2</th>
+                           <td id="a2" class="white">a2</td>
+                           <td id="b2" class="black">b2</td>
+                           <td id="c2" class="white">c2</td>
+                           <td id="d2" class="black">d2</td>
+                           <td id="e2" class="white">n3</td>
+                           <td id="f2" class="black">n4</td>
+                           <td id="g2" class="white">n4</td>
+                           <td id="h2" class="black">n5</td>
+                           <th>2</th>
+                       </tr>
+                       <tr>
+                           <th>3</th>
+                           <td id="a3" class="black">a3</td>
+                           <td id="b3" class="white">b3</td>
+                           <td id="c3" class="black">c3</td>
+                           <td id="d3" class="white">n3</td>
+                           <td id="e3" class="black">n3</td>
+                           <td id="f3" class="white">n4</td>
+                           <td id="g3" class="black">n4</td>
+                           <td id="h3" class="white">n5</td>
+                           <th>3</th>
+                       </tr>
+                       <tr>
+                           <th>4</th>
+                           <td id="a4" class="white">a4</td>
+                           <td id="b4" class="black">b4</td>
+                           <td id="c4" class="white">c4</td>
+                           <td id="d4" class="black">n3</td>
+                           <td id="e4" class="white">n3</td>
+                           <td id="f4" class="black">n4</td>
+                           <td id="g4" class="white">n4</td>
+                           <td id="h4" class="black">n5</td>
+                           <th>4</th>
+                       </tr>
+                       <tr>
+                           <th>5</th>
+                           <td id="a5" class="black">a5</td>
+                           <td id="b5" class="white">b5</td>
+                           <td id="c5" class="black">c5</td>
+                           <td id="d5" class="white">n3</td>
+                           <td id="e5" class="black">n3</td>
+                           <td id="f5" class="white">n4</td>
+                           <td id="g5" class="black">n4</td>
+                           <td id="h5" class="white">n5</td>
+                           <th>5</th>
+                       </tr>
+                       <tr>
+                           <th>6</th>
+                           <td id="a6" class="white">a6</td>
+                           <td id="b6" class="black">b6</td>
+                           <td id="c6" class="white">c6</td>
+                           <td id="d6" class="black">d6</td>
+                           <td id="e6" class="white">e6</td>
+                           <td id="f6" class="black">n4</td>
+                           <td id="g6" class="white">n4</td>
+                           <td id="h6" class="black">n5</td>
+                           <th>6</th>
+                       </tr>
+                       <tr>
+                           <th>7</th>
+                           <td id="a7" class="black">a7</td>
+                           <td id="b7" class="white">b7</td>
+                           <td id="c7" class="black">c7</td>
+                           <td id="d7" class="white">n3</td>
+                           <td id="e7" class="black">n3</td>
+                           <td id="f7" class="white">n4</td>
+                           <td id="g7" class="black">n4</td>
+                           <td id="h7" class="white">n5</td>
+                           <th>7</th>
+                       </tr>
+                       <tr>
+                           <th>8</th>
+                           <td id="a8" class="white">a8</td>
+                           <td id="b8" class="black">b8</td>
+                           <td id="c8" class="white">c8</td>
+                           <td id="d8" class="black">n3</td>
+                           <td id="e8" class="white">n3</td>
+                           <td id="f8" class="black">n4</td>
+                           <td id="g8" class="white">n4</td>
+                           <td id="h8" class="black">n5</td>
+                           <th>8</th>
+                       </tr>
+                   </table>
+<!--
+                    <table>
+                       <thead>                                                           <tr>
+                                <th></th>
+                                <th>A</th>
+                                <th>B</th>
+                                <th>C</th>
+                                <th>D</th>
+                                <th>E</th>
+                                <th>f</th>
+                                <th>g</th>
+                                <th>h</th>
+                                <th></th>
+                            </tr>
+                       </thead>
+                        <tfoot>
+                            <tr>
+                                <th></th>
+                                <th>A</th>
+                                <th>B</th>
+                                <th>C</th>
+                                <th>D</th>
+                                <th>E</th>
+                                <th>f</th>
+                                <th>g</th>
+                                <th>h</th>
+                                <th></th>
+                            </tr>
+                        </tfoot>
+                        <tbody>
+                            <tr>
+                                <th>1</th>
+                                <td id="a1" class="black">a1</td>
+                                <td id="b1">b1</td>
+                                <td id="c1" class="black">c1</td>
+                                <td id="d1">d1</td>
+                                <td id="e1" class="black">e1</td>
+                                <td id="f1">f1</td>
+                                <td id="g1" class="black">g1</td>
+                                <td id="h1">h1</td>
+                                <th>1</th>
+                            </tr>
+                            <tr>
+                                <th>2</th>
+                                <td id="a2">2</td>
+                                <td id="b2" class="black">2</td>
+                                <td id="c2">2</td>
+                                <td id="d2" class="black">2</td>
+                                <td id="e2">2</td>
+                                <td id="f2" class="black">2</td>
+                                <td id="g2">2</td>
+                                <td id="f2" class="black">2</td>
+                                <th>2</th>
+                            </tr>
+                            <tr>
+                                <th>3</th>
+                                <td id="a3">3</td>
+                                <td id="b3">3</td>
+                                <td id="c3">3</td>
+                                <td id="d3">3</td>
+                                <td id="e3">3</td>
+                                <td id="f3">3</td>
+                                <td id="g3">3</td>
+                                <td id="h3">3</td>
+                                <th>3</th>
+                            </tr>
+                            <tr>
+                                <th>4</th>
+                                <td id="a1">n1</td>
+                                <td id="a2">n2</td>
+                                <td id="a3">n3</td>
+                                <td id="a4">n4</td>
+                                <td id="a5">n5</td>
+                                <td id="a6">n6</td>
+                                <td id="a7">n7</td>
+                                <td id="a8">n8</td>
+                                <th>4</th>
+                            </tr>
+                            <tr>
+                                <th>5</th>
+                                <td id="a1">n1</td>
+                                <td id="a2">n2</td>
+                                <td id="a3">n3</td>
+                                <td id="a4">n4</td>
+                                <td id="a5">n5</td>
+                                <td id="a6">n6</td>
+                                <td id="a7">n7</td>
+                                <td id="a8">n8</td>
+                                <th>5</th>
+                            </tr>
+                            <tr>
+                                <th>6</th>
+                                <td id="a1">n1</td>
+                                <td id="a2">n2</td>
+                                <td id="a3">n3</td>
+                                <td id="a4">n4</td>
+                                <td id="a5">n5</td>
+                                <td id="a6">n6</td>
+                                <td id="a7">n7</td>
+                                <td id="a8">n8</td>
+                                <th>6</th>
+                            </tr>
+                            <tr>
+                                <th>7</th>
+                                <td id="a1">n1</td>
+                                <td id="a2">n2</td>
+                                <td id="a3">n3</td>
+                                <td id="a4">n4</td>
+                                <td id="a5">n5</td>
+                                <td id="a6">n6</td>
+                                <td id="a7">n7</td>
+                                <td id="a8">n8</td>
+                                <th>7</th>
+                            </tr>
+                            <tr>
+                                <th>8</th>
+                                <td id="a1">n1</td>
+                                <td id="a2">n2</td>
+                                <td id="a3">n3</td>
+                                <td id="a4">n4</td>
+                                <td id="a5">n5</td>
+                                <td id="a6">n6</td>
+                                <td id="a7">n7</td>
+                                <td id="a8">n8</td>
+                                <th>8</th>
+                            </tr>
+                        </tbody>
+                    </table>
+-->
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
