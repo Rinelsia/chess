@@ -8,6 +8,10 @@ td{
     width: 80px;
     height: 80px;
     text-align: center;
+    cursor: pointer;
+}
+td:hover{
+    background: #152fe782;;
 }
 .black{
     background: #e36e2acf;
